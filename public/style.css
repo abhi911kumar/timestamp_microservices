@@ -1,0 +1,51 @@
+* {
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: white;
+        font-family: "Roboto", "Helvetica Neue", helvetica, arial, sans-serif;
+        line-height: 30px;
+      }
+
+      main {
+        padding: 1rem;
+      }
+
+      p {
+        max-width: 500px
+      }
+
+      .note{
+        font-size: small;
+        color: #9B9B9B;
+      }
+
+      .content{
+        margin: 50px;
+        position: fixed;
+      }
+
+      #loader:after {
+        overflow: hidden;
+        display: inline-block;
+        vertical-align: bottom;
+        animation: ellipsis steps(4,end) 1000ms infinite;
+        content: "\2026";
+        width: 0px;
+      }
+
+      @keyframes ellipsis {
+        to {
+          width: 1.25em
+        }
+      }
+
+      canvas#background {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
